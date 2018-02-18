@@ -1,0 +1,59 @@
+<div [hidden]="loading">
+  <mat-progress-bar mode="indeterminate" class="progressbar"></mat-progress-bar>
+</div>
+<div class="login-frame">
+  <div class="container">
+    <div class="inner-sec">
+      <div class="inner-main">
+        <div class="welcome-frame">
+          <div class="welcome-inner">
+            <h2 class="welcome-title">Setup an extra layer of security</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <div class="tmc">
+              <a href="javascript:void(0)">Terms & Conditions</a>
+            </div>
+          </div>
+          <div class="welcome-btm-sec" style="background: url(assets/images/stock-vector-business-people-climb-to-the-top-of-the-mountain-leader-helps-the-team-to-climb-the-cliff-and-500593225.jpg);"></div>
+        </div>
+        <div class="inner-frame">
+          <form novalidate (ngSubmit)="mobileAuth(form,$event)" #form="ngForm">
+            <div class="logo-sec">
+              <a routerLink="/fame/mobile-auth" class="back-icon-frame">
+                <i class="material-icons">keyboard_backspace</i>
+              </a>
+              <img src="assets/images/fame-logo.png" class="fame-logo">
+            </div>
+            <div class="login-title">
+              <div class="col-md-6 login-title cstm-col">
+                <h2 class="log-title">Mobile Verification</h2>
+              </div>
+              <div class="col-md-6 refresh cstm-col">
+                <a href="javascript:void(0)" (click)="resetFrm()">
+                  <img src="assets/images/refresh-icon.png">
+                </a>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+            <div class="clearfix"></div>
+
+          <!--  Form Inputs -->
+            <div class="input-rw mob-ver-desc">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+            <div class="input-rw">
+              <div class="example-container">
+                <mat-form-field>
+                  <input matInput placeholder="Mobile Number" name="mobNumber" [(ngModel)]="formData.mobNumber" #name="ngModel">
+                </mat-form-field>
+              </div>
+            </div>
+            <div class="login-btn-sec">
+              <button mat-button class="green-btn btn-login">Submit</button>
+            </div>
+          </form>
+          <div class="orange-line"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

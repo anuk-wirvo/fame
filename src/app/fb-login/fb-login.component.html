@@ -1,0 +1,52 @@
+<div [hidden]="loading">
+  <mat-progress-bar mode="indeterminate" class="progressbar"></mat-progress-bar>
+</div>
+<div class="login-frame">
+  <div class="container">
+    <div class="inner-sec">
+      <div class="inner-main">
+        <div class="welcome-frame">
+          <div class="welcome-inner">
+            <h2 class="welcome-title">Integration of social media</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <div class="tmc">
+              <a href="javascript:void(0)">Terms & Conditions</a>
+            </div>
+          </div>
+          <div class="welcome-btm-sec" style="background: url(assets/images/stock-vector-business-people-stand-on-the-podium-with-the-cup-and-medals-isometric-businessman-with-the-cup-in-499707724.jpg);"></div>
+        </div>
+        <div class="inner-frame">
+          <form novalidate (ngSubmit)="mobileAuth(form,$event)" #form="ngForm">
+            <div class="logo-sec">
+              <a routerLink="/fame/mobile-auth-step-2" class="back-icon-frame">
+                <i class="material-icons">keyboard_backspace</i>
+              </a>
+              <img src="assets/images/fame-logo.png" class="fame-logo">
+            </div>
+            <div class="login-title">
+              <div class="col-md-6 login-title cstm-col">
+                <h2 class="log-title">Facebook Integration</h2>
+              </div>
+              <div class="col-md-6 refresh cstm-col">
+                <a href="javascript:void(0)">
+                  <img src="assets/images/refresh-icon.png">
+                </a>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+            <div class="clearfix"></div>
+
+          <!--  Form Inputs -->
+            <div class="input-rw mob-ver-desc">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+            <div class="login-btn-sec fb-log-btn-sec">
+              <button mat-button class="blue-btn fb-log-btn" (click)="goToFB()">Login With Facebook</button>
+            </div>
+          </form>
+          <div class="orange-line"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

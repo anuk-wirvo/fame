@@ -1,1 +1,15 @@
-/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+.mat-form-field {
+	display: block !important;
+}
+.back-icon-frame {
+	display: inline-block;
+  color: #f78e1e;
+  position: relative;
+  right: 10px;
+	float: left;
+	&:hover {
+		color: #e28725;
+	}
+}

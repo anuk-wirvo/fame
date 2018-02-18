@@ -1,0 +1,71 @@
+<div [hidden]="loading">
+  <mat-progress-bar mode="indeterminate" class="progressbar"></mat-progress-bar>
+</div>
+<div class="login-frame">
+  <div class="container">
+    <div class="inner-sec">
+      <div class="inner-main">
+        <div class="welcome-frame">
+          <div class="welcome-inner">
+            <h2 class="welcome-title">Welcome to fame</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <div class="tmc">
+              <a href="javascript:void(0)">Terms & Conditions</a>
+            </div>
+          </div>
+          <div class="welcome-btm-sec" style="background: url(assets/images/stock-vector-business-concept-leadership-and-teamwork-vector-illustration-of-business-hero-or-superhero-flying-425136319.jpg);"></div>
+        </div>
+        <div class="inner-frame">
+          <form novalidate (ngSubmit)="login(form,$event)" #form="ngForm">
+            <div class="logo-sec">
+              <img src="./assets/images/fame-logo.png" class="fame-logo">
+            </div>
+            <div class="login-title">
+              <div class="col-md-6 login-title cstm-col">
+                <h2 class="log-title">Login</h2>
+              </div>
+              <div class="col-md-6 refresh cstm-col">
+                <a href="javascript:void(0)" (click)="resetFrm()">
+                  <img src="assets/images/refresh-icon.png">
+                </a>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+            <div class="clearfix"></div>
+
+          <!--  Form Inputs -->
+          <!-- <form novalidate (ngSubmit)="login(form,$event)" #form="ngForm"> -->
+            <div class="input-rw">
+              <mat-form-field class="example-full-width">
+                <input matInput placeholder="Username" value="Test" [(ngModel)]="formData.email" name="email" #email="ngModel" required>
+              </mat-form-field>
+              <span class="text-error" [hidden]="email.valid || (email.untouched && formSubmitted==false)" *ngIf="email.errors?.required">user name is required</span>
+            </div>
+            <div class="input-rw">
+              <div class="example-container">
+                <mat-form-field>
+                  <input matInput placeholder="Password" [type]="hide ? 'password' : 'text'" value="123" [(ngModel)]="formData.password" name="password" #password="ngModel" required>
+                  <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
+                </mat-form-field>
+                <span class="text-error"  [hidden]="password.valid || (password.untouched && formSubmitted==false)" *ngIf="password.errors?.required">password is required</span>
+              </div>
+            </div>
+            <div class="forget-rw">
+              <a routerLink="/fame/reset-password">Forgot Password?</a>
+            </div>
+
+            <div class="login-btn-sec">
+              <a (click)="fbLogin()" mat-button color="primary" class="blue-btn fbLogBtn">Facebook Login</a>
+              <button mat-button class="green-btn btn-login">Login</button>
+            </div>
+          </form>
+          <!-- Login footer  -->
+          <div class="log-footer">
+            <a href="https://www.facebook.com/" target="_blank" class="login-footer-link">Create a new facebook account</a>
+          </div>
+          <div class="orange-line"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
