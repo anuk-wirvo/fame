@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { NgModule } from '@angular/core';
 import {BrowserAnimationsModule, NoopAnimationsModule} from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
@@ -8,14 +8,14 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { AppRoutingModule } from './app-routing.module';
 
 // lib
-import {MatButtonModule, MatCheckboxModule, MatNativeDateModule } from '@angular/material';
+//import {MatButtonModule, MatCheckboxModule, MatNativeDateModule } from '@angular/material';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatSelectModule} from '@angular/material/select';
 import {MatInputModule} from '@angular/material/input';
 import {MatRadioModule} from '@angular/material/radio';
-import {MatExpansionModule} from '@angular/material/expansion';
+//import {MatExpansionModule} from '@angular/material/expansion';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import {MatDatepickerModule} from '@angular/material/datepicker';
@@ -63,7 +63,7 @@ import { FbLoginComponent } from './fb-login/fb-login.component';
   ],
   exports: [MatButtonModule, MatCheckboxModule],
   providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
-  schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
+  schemas: [ ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
